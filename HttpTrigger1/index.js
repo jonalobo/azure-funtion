@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+// eslint-disable-next-line no-undef
 module.exports = async function (context, req) {
     //Acá creo una constante que en cada petición get tendrá un valor entero entre 0 y 5.
     const numero = Math.round(Math.random()*5)
@@ -9,6 +11,8 @@ module.exports = async function (context, req) {
 
     context.res = {
         status: 201,
-        body: mensajeACliente
+        body: {
+            mensajeACliente: mensajeACliente
+        }
     };
 }
